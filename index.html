@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Compatibility with IE. Fuck you IE. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Defining the charset in HTML5 -->
+  <meta charset="utf-8">
+  <!-- Optimize for mobile -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- A short summary of the complete page -->
+  <meta name="description" content="I am a 20-something year old programmer working for an ad-tech startup called Rocket Fuel">
+  <!-- Generator of this document - me and Apache :) -->
+  <meta name="generator" content="Apache">
+  <!-- Author of this document - me :) -->
+  <meta name="author" content="Ankush Agarwal">
+  <!-- Author of this document - me :) -->
+  <meta name="keywords" content="Ankush,Agarwal,Rocket,Fuel,Rocketfuel,Apache,Nginx,Programmer,Ankush Agarwal">
+  <!-- Title of the page. My Full Name -->
+  <title>Ankush Agarwal</title>
+  <!-- Open all links in this page relative to the following URL -->
+  <base target="_self" href="http://ankush.io/">
+  <!--   Display favicon -->
+  <link rel="shortcut icon" href="public/favicon.ico" />
+
+  <!-- StyleSheets -->
+  <link href="public/css/main.css" rel="stylesheet" type="text/css">
+  <link href="public/css/css.css" rel="stylesheet" type="text/css">
+  <link href="public/css/prettify-hemisu.css" rel="stylesheet" type="text/css">
+
+  <!-- Javascripts -->
+  <script src="public/js/jquery.js"></script>
+  <script src="public/js/prettify.js" type="text/javascript"></script>
+</head>
+
+<body onload="prettyPrint()">
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <a href="http://ankush.io/">Ankush Agarwal</a>
+      </div>
+
+      <div class="navi">
+        <ul>
+          <li>
+            <a href="http://ankush.io/">About</a>
+          </li>
+
+          <li>
+            <a href="http://ankush.io/blog/">Blog</a>
+          </li>
+
+          <li style="list-style: none; display: inline">
+            <ul></ul>
+          </li>
+        </ul>
+      </div>
+      <!-- // .navi -->
+    </header>
+
+    <article>
+      <header>
+        <h1 class="center">About</h1>
+      </header>
+
+      <p>Hello there! I am a 20-something year old programmer working for an ad-tech startup called <a href="http://rocketfuel.com" target="_blank">Rocket Fuel</a> in the San Francisco Bay Area. I am labeled a Rocket Scientist, but I would like to think of
+        myself as a humble programmer exploring the fascinating world of Software. I will try to use this <a href="/blog">blog</a> to share my musings along the way.</p>
+
+      <p>
+        I happen to be a fan of the Pop and Bollywood-Pop genres of music. I occasionally <a href="http://www.flickr.com/photos/49285061@N08/" target="_blank">snap</a> a picture or two when I travel. I can be found either at the Pool table or the Ping-Pong
+        table when I am missing from my desk.
+      </p>
+
+      <p>My technical interests include :</p>
+
+      <ul>
+        <li>Scalable Distributed servers</li>
+
+        <li>TCP/IP Stack</li>
+
+        <li><a href="http://en.wikipedia.org/wiki/C10k_problem" target="_blank">C<span style="font-family:'Times New Roman'">10k</span></a> web and proxy servers like httpd/nginx/Jetty</li>
+      </ul>
+
+      <p>You can get in touch with me at &lt;<a href="http://www.rot13.com/" target="_blank" title="rot13">rot<span style="font-family:'Times New Roman'">13</span></a>&gt;naxhfuntnejny<span style="font-family:'Times New Roman'">11</span>&lt;/<a href="http://www.rot13.com/"
+        target="_blank" title="rot13">rot<span style="font-family:'Times New Roman'">13</span></a>&gt; [AT] gmail.com</p>
+    </article>
+    <!-- END OF _layouts/page.html -->
+
+    <footer>
+      Copyright © 2013 Ankush Agarwal. Last updated : Nov' 13
+      <p><a href="https://github.com/elisehein/Pageturner">Pageturner theme</a>
+      </p>
+    </footer>
+  </div>
+  <!-- // .wrap -->
+  <script>
+    $(document).ready(function() {
+      // Make images center
+      $('p:has(img)').css('text-align', 'center');
+
+      // Add the image's title attribute as a caption
+      $('p:has(img)').append(function() {
+        return '<div class="caption">' + $('img', this).attr('title') + '<\/div>';
+      });
+
+      // Prettify code
+      $('code').addClass('prettyprint');
+
+      // Bring social media spam links online
+      $('.social-media-spam').each(function() {
+        var $this = $(this);
+        var urlHere = window.location.href;
+        var currentSubmitHref = $this.attr('href');
+        var title = $('article header h1 a').html();
+        currentSubmitHref += encodeURIComponent(title);
+        console.log(currentSubmitHref);
+        $this.attr('href', currentSubmitHref);
+      });
+
+    });
+  </script>
+  <!-- Add Google Analytics script -->
+</body>
+
+</html>
